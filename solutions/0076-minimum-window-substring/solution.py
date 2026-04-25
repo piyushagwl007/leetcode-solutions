@@ -5,7 +5,7 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
        left = 0
        targetMap = Counter(t)
-       required = len(targetMap)
+       need = len(targetMap)
        currentCharMap = {}
        minWindowSize = float('inf')
        minLeft = None
@@ -15,7 +15,7 @@ class Solution:
         currentCharMap[s[right]] = currentCharMap.get(s[right], 0) + 1
         if s[right] in targetMap and currentCharMap[s[right]] == targetMap[s[right]]:
             satisfied += 1
-        while required == satisfied:
+        while need == satisfied:
             currentWindowSize = right - left +1
             if currentWindowSize < minWindowSize:
                 minWindowSize = currentWindowSize
