@@ -1,58 +1,33 @@
-class Solution:
-    def hasAllChars(self, substring:str, t: str):
-        for char in t:
-            if substring.count(char) < t.count(char):
-                return False
-        return True
+from collections import Counter
 
-    def hasMatchingCharCountInCharMap(self, sustringCharMap:dict[str], targetCharMap:dict[str]):
-        for char, charCount in targetCharMap.items():
-            if char not in sustringCharMap or sustringCharMap[char] < charCount:
-                return False
-        return True
+class Solution:
 
     def minWindow(self, s: str, t: str) -> str:
-        minWindowLength = float('inf')
-        minWindowLeft = None
-        minWindowRight = None
-        charMap = {}
-        for char in t:
-            if char in charMap:
-                charMap[char] += 1
-            else:
-                charMap[char] = 1
- 
-        # for left in range(len(s)):
-        #     currentCharMap = {}
-        #     for right in range(left, len(s)):
-        #         if s[right] in currentCharMap:
-        #             currentCharMap[s[right]] +=1 
-        #         else:
-        #             currentCharMap[s[right]] = 1
-                
-        #         # hasMatchingChar = self.hasMatchingCharCountInCharMap(currentCharMap, charMap)
-        #         # if hasMatchingChar and minWindowLength > (right - left +1):
-        #         #     minWindowLength = min(minWindowLength, right - left +1)
-        #         #     minWindowLeft = left
-        #         #     minWindowRight = right
-        left = 0
-        right = 0
-        runningSubstring = ""
-        runningCharMap = {}
-        while right < len(s):
-            if s[right] in runningCharMap:
-                runningCharMap[s[right]] += 1
-            else:
-                runningCharMap[s[right]] = 1
-            while self.hasMatchingCharCountInCharMap(runningCharMap, charMap):
-                currentLength = right - left + 1
-                if currentLength < minWindowLength:
-                    minWindowLength = min(minWindowLength, right - left +1)
-                    minWindowLeft = left
-                    minWindowRight = right
-                runningCharMap[s[left]] -= 1
-                left += 1
-            right += 1
-        return s[minWindowLeft:minWindowRight+1] if minWindowLeft is not None and minWindowRight is not None else ""
-                    
-        
+       left = 0
+       targetMap = Counter(t)
+       required = len(targetMap)
+       currentCharMap = {}
+       minWindowSize = float('inf')
+       minLeft = None
+       minRight = None
+       satisfied = 0
+       for right in range(len(s)):
+        # Add char to char map 
+        # Check how many conditions have we satisfied
+        # If satisifed all then iterate left until dissatisfy condition
+        currentCharMap[s[right]] = currentCharMap.get(s[right], 0) + 1
+        if s[right] in targetMap and currentCharMap[s[right]] == targetMap[s[right]]:
+            satisfied += 1
+        while required == satisfied:
+            print(f"The ")
+            currentWindowSize = right - left +1
+            if currentWindowSize < minWindowSize:
+                minWindowSize = currentWindowSize
+                minLeft = left
+                minRight = right
+            currentCharMap[s[left]] -= 1
+            if s[left] in targetMap and currentCharMap[s[left]] < targetMap[s[left]]:
+                satisfied -= 1
+            left += 1
+       minSubstring = s[minLeft:minRight+1] if minLeft is not None else ""
+       return minSubstring
