@@ -2,8 +2,8 @@
 
 **Difficulty:** Hard
 **Tags:** `Hash Table` · `String` · `Sliding Window`
-**Runtime:** 99 ms (faster than 38.48%)
-**Memory:** 19.8 MB (less than 40.42%)
+**Runtime:** 67 ms (faster than 64.13%)
+**Memory:** 19.7 MB (less than 40.42%)
 **Source:** https://leetcode.com/problems/minimum-window-substring/
 
 ---

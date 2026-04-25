@@ -21,21 +21,21 @@
         "\"ADOBECODEBANC\"",
         "\"ABC\""
       ],
-      "expected": null
+      "expected": "\"BANC\""
     },
     {
       "input": [
         "\"a\"",
         "\"a\""
       ],
-      "expected": null
+      "expected": "\"a\""
     },
     {
       "input": [
         "\"a\"",
         "\"aa\""
       ],
-      "expected": null
+      "expected": "\"\""
     }
   ]
 }

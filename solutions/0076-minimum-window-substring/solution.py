@@ -12,14 +12,10 @@ class Solution:
        minRight = None
        satisfied = 0
        for right in range(len(s)):
-        # Add char to char map 
-        # Check how many conditions have we satisfied
-        # If satisifed all then iterate left until dissatisfy condition
         currentCharMap[s[right]] = currentCharMap.get(s[right], 0) + 1
         if s[right] in targetMap and currentCharMap[s[right]] == targetMap[s[right]]:
             satisfied += 1
         while required == satisfied:
-            print(f"The ")
             currentWindowSize = right - left +1
             if currentWindowSize < minWindowSize:
                 minWindowSize = currentWindowSize
