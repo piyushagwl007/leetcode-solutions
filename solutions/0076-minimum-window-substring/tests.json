@@ -1,0 +1,41 @@
+{
+  "questionId": "76",
+  "title": "Minimum Window Substring",
+  "titleSlug": "minimum-window-substring",
+  "difficulty": "Hard",
+  "functionName": "minWindow",
+  "params": [
+    {
+      "name": "s",
+      "type": "string"
+    },
+    {
+      "name": "t",
+      "type": "string"
+    }
+  ],
+  "returnType": "string",
+  "cases": [
+    {
+      "input": [
+        "\"ADOBECODEBANC\"",
+        "\"ABC\""
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        "\"a\"",
+        "\"a\""
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        "\"a\"",
+        "\"aa\""
+      ],
+      "expected": null
+    }
+  ]
+}
