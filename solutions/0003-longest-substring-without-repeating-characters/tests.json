@@ -1,0 +1,34 @@
+{
+  "questionId": "3",
+  "title": "Longest Substring Without Repeating Characters",
+  "titleSlug": "longest-substring-without-repeating-characters",
+  "difficulty": "Medium",
+  "functionName": "lengthOfLongestSubstring",
+  "params": [
+    {
+      "name": "s",
+      "type": "string"
+    }
+  ],
+  "returnType": "integer",
+  "cases": [
+    {
+      "input": [
+        "\"abcabcbb\""
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        "\"bbbbb\""
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        "\"pwwkew\""
+      ],
+      "expected": null
+    }
+  ]
+}
