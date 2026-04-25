@@ -1,0 +1,41 @@
+{
+  "questionId": "209",
+  "title": "Minimum Size Subarray Sum",
+  "titleSlug": "minimum-size-subarray-sum",
+  "difficulty": "Medium",
+  "functionName": "minSubArrayLen",
+  "params": [
+    {
+      "name": "target",
+      "type": "integer"
+    },
+    {
+      "name": "nums",
+      "type": "integer[]"
+    }
+  ],
+  "returnType": "integer",
+  "cases": [
+    {
+      "input": [
+        "7",
+        "[2,3,1,2,4,3]"
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        "4",
+        "[1,4,4]"
+      ],
+      "expected": null
+    },
+    {
+      "input": [
+        "11",
+        "[1,1,1,1,1,1,1,1]"
+      ],
+      "expected": null
+    }
+  ]
+}
