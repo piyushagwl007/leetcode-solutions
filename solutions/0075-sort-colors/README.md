@@ -3,7 +3,7 @@
 **Difficulty:** Medium
 **Tags:** `Array` · `Two Pointers` · `Sorting`
 **Runtime:** 0 ms (faster than 100.00%)
-**Memory:** 19.3 MB (less than 64.54%)
+**Memory:** 19.3 MB (less than 26.58%)
 **Source:** https://leetcode.com/problems/sort-colors/
 
 ---
