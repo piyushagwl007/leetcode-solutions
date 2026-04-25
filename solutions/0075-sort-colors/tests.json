@@ -1,0 +1,28 @@
+{
+  "questionId": "75",
+  "title": "Sort Colors",
+  "titleSlug": "sort-colors",
+  "difficulty": "Medium",
+  "functionName": "sortColors",
+  "params": [
+    {
+      "name": "nums",
+      "type": "integer[]"
+    }
+  ],
+  "returnType": "void",
+  "cases": [
+    {
+      "input": [
+        "[2,0,2,1,1,0]"
+      ],
+      "expected": "[0,0,1,1,2,2]"
+    },
+    {
+      "input": [
+        "[2,0,1]"
+      ],
+      "expected": "[0,1,2]"
+    }
+  ]
+}
