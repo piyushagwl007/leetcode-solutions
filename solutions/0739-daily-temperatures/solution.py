@@ -14,11 +14,17 @@ from solutions.helpers import ListNode, TreeNode  # noqa: F401
 
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-       stack = []
-       output = [0] * len(temperatures)
-       for i in range(len(temperatures)):
-            while stack and temperatures[stack[-1]] < temperatures[i]:
-                index = stack.pop()
-                output[index] = i - index
-            stack.append(i)
-       return output
+        numberOfDays = len(temperatures)
+        output = [ 0 for i in range(numberOfDays)]
+        for i in range(numberOfDays -2, -1, -1):
+            j = i + 1
+            while j < numberOfDays :
+                if temperatures[j] > temperatures[i]:
+                    output[i] = j - i
+                    break
+                
+                if output[j] == 0:
+                    break
+                j = j + output[j]
+        
+        return output
