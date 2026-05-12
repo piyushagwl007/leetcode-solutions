@@ -2,8 +2,8 @@
 
 **Difficulty:** Medium
 **Tags:** `Array` · `Stack` · `Monotonic Stack`
-**Runtime:** 91 ms (faster than 70.75%)
-**Memory:** 28.7 MB (less than 51.05%)
+**Runtime:** 110 ms (faster than 34.73%)
+**Memory:** 28 MB (less than 94.46%)
 **Source:** https://leetcode.com/problems/daily-temperatures/
 
 ---
