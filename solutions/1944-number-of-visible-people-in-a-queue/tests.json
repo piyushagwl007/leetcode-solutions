@@ -1,0 +1,28 @@
+{
+  "questionId": "1944",
+  "title": "Number of Visible People in a Queue",
+  "titleSlug": "number-of-visible-people-in-a-queue",
+  "difficulty": "Hard",
+  "functionName": "canSeePersonsCount",
+  "params": [
+    {
+      "type": "integer[]",
+      "name": "heights"
+    }
+  ],
+  "returnType": "integer[]",
+  "cases": [
+    {
+      "input": [
+        "[10,6,8,5,11,9]"
+      ],
+      "expected": "[3,1,2,1,1,0]"
+    },
+    {
+      "input": [
+        "[5,1,2,3,10]"
+      ],
+      "expected": "[4,1,1,1,0]"
+    }
+  ]
+}
