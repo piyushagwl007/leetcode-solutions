@@ -14,24 +14,18 @@ from solutions.helpers import ListNode, TreeNode  # noqa: F401
 
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        merged = True
-        while merged:
-            result = []
-            used= [False] * len(intervals)
-            merged = False
-            for i in range(len(intervals)):
-                if used[i] == True:
-                    continue
-                starti, endi = intervals[i]
-                for j in range(len(intervals)):
-                    if i == j or used[j] == True:
-                        continue
-                    startj, endj = intervals[j]
-                    if starti <= endj and startj <= endi:
-                        merged = True
-                        used[j] = True
-                        starti = min(starti, startj)
-                        endi = max(endi, endj)
-                result.append([starti, endi])
-            intervals = result
+        intervals.sort(key=lambda x: x[0])
+        result = []
+        start, end = intervals[0]
+        currentInterval = 0
+        for i in range(1, len(intervals)):
+            starti, endi = intervals[i]
+            if start <= endi and starti <= end:
+                start = start
+                end = max(end, endi)
+            else:
+                result.append([start, end])
+                start = starti
+                end = endi
+        result.append([start, end])
         return result
