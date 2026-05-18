@@ -2,8 +2,8 @@
 
 **Difficulty:** Medium
 **Tags:** `Array` · `Sorting`
-**Runtime:** 6405 ms (faster than 7.16%)
-**Memory:** 23.7 MB (less than 7.76%)
+**Runtime:** 11 ms (faster than 25.29%)
+**Memory:** 23.2 MB (less than 16.02%)
 **Source:** https://leetcode.com/problems/merge-intervals/
 
 ---
